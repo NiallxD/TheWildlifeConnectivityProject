@@ -6,7 +6,7 @@
 # The Little Owl
 <p id="reading-time" style="font-style: italic;">⏱️ Approx Reading Time:  <span id="inserted-text"></span> mins</p>
 
-The little owl is a fairly well known bird in Britain, but many don’t realise that this angry, but adorable in equal measure, owl was actually introduced in 1842. This means that the little owl isn't a native [[3.0 - 📷 Photography/3.1 - 🏞️ Galleries/3.1.1 - 🦅 Birds/3.1.1.1 - British Birds\|British Bird]], but it is one that we've welcomed and grown to love.
+The little owl is a fairly well known bird in Britain, but many don’t realise that this angry, but adorable in equal measure, owl was actually introduced in 1842. This means that the little owl isn't a native [[3.1.1.1 - British Birds\|British Bird]], but it is one that we've welcomed and grown to love.
 
 As is customary for British landowners, the little owls introduction wasn’t taken well. In the 1900’s,  gamekeepers shot this bird on sight because it was said to feed exclusively on grouse and pheasant chicks. We now know this is not the case, they prefer insects and worms. The little owl has enjoyed peace in the British countryside ever since.
 

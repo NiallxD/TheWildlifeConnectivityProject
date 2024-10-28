@@ -86,7 +86,7 @@ I felt a huge sense of pride and achievement at this moment. On the whole I thin
 
 ## Film Photography Since
 
-Since this first run, I've put about 10 rolls through the camera, including a very-out-of-date roll of colour film. Below are some highlight images that I really like, for more please do check out my [[3.0 - 📷 Photography/3.1 - 🏞️ Galleries/3.1.4 - 🚀 Other/3.1.4.2 - Film Photography\|Film Photography]] gallery.
+Since this first run, I've put about 10 rolls through the camera, including a very-out-of-date roll of colour film. Below are some highlight images that I really like, for more please do check out my [[3.1.4.2 - Film Photography\|Film Photography]] gallery.
 
 ![](https://i.imgur.com/egFW5Tz.jpeg)
 *A dear friend. This is a photograph I captured of a good friend of mine whilst out looking for red squirrels in North Yorkshire. There is so much character in the image, more so than you as a viewer can know without knowing my friend. This is a special photograph.*

@@ -28,7 +28,7 @@ Here are some photos of Tschuna I've taken over the years.
 
 ## My Zoo Breakup
 
-Unfortunately, the zoo where Tschuna lives has fallen out with me for advocating for change in their practices, so I can't go see her any more, but I do have many fond memories and several friends continue to share photos and stories with me. Click [[3.0 - 📷 Photography/3.1 - 🏞️ Galleries/3.1.4 - 🚀 Other/3.1.4.7 - The Zoo\|here]] and [[2.0 - 📝 Blog Posts/2.2 - 🌱 Nature/An Open Letter To Yorkshire Wildlife Park\|here]] to read more about the breakup!
+Unfortunately, the zoo where Tschuna lives has fallen out with me for advocating for change in their practices, so I can't go see her any more, but I do have many fond memories and several friends continue to share photos and stories with me. Click [[3.1.4.7 - The Zoo\|here]] and [[2.0 - 📝 Blog Posts/2.2 - 🌱 Nature/An Open Letter To Yorkshire Wildlife Park\|here]] to read more about the breakup!
 
 In reflection of my connection with tigers, I even have a tiger tattooed on my arm. This is one of my photos of Tschuna.
 

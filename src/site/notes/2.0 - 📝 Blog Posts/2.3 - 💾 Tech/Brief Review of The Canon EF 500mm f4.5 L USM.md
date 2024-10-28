@@ -60,7 +60,7 @@ Canon EF 400 f/2.8 vs EF 500mm f/4.5 vs my cat Toby.
 
 **Note:** This 500 has a unique manual focus setup that I’ve not seen before. There is a three-point switch on the lens that lets you choose how fast you can manually focus. On the fastest setting, a slight turn of the ring moves the focus a lot, on the slowest, there is much less focus movement for the same amount of turn. This is possible because of the focus-by-wire setup in this lens. For the same reason, if AF dies, you cannot manually focus.
 
-**Update Note:** I’ve since shot a lot of birds in flight with this lens, and it is now my go to lens for birding. The AF is excellent, even when trying to lock on to diving kingfishers. See updated photos below or my [[3.0 - 📷 Photography/3.1 - 🏞️ Galleries/3.1.1 - 🦅 Birds/3.1.1.2 - Kingfisher\|kingfisher gallery]].
+**Update Note:** I’ve since shot a lot of birds in flight with this lens, and it is now my go to lens for birding. The AF is excellent, even when trying to lock on to diving kingfishers. See updated photos below or my [[3.1.1.2 - Kingfisher\|kingfisher gallery]].
 
 ## Image Quality
 
