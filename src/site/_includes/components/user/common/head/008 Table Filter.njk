@@ -2,11 +2,35 @@
     document.addEventListener("DOMContentLoaded", function() {
         console.log("Script is running");
 
+        // Function to extract unique tags from the table
+        function populateDropdown() {
+            var rows = document.querySelectorAll(".dataview.table-view-table tbody tr");
+            var tagsSet = new Set();
+
+            rows.forEach((row) => {
+                var tagsCell = row.querySelector("td:last-child");
+                if (tagsCell) {
+                    var tags = tagsCell.textContent.trim().split(',').map(tag => tag.trim().toLowerCase());
+                    tags.forEach(tag => tagsSet.add(tag));
+                }
+            });
+
+            var dropdown = document.getElementById("tagFilter");
+            tagsSet.forEach(tag => {
+                var option = document.createElement("option");
+                option.value = tag;
+                option.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+                dropdown.appendChild(option);
+            });
+        }
+
         // Filter function
         window.filterTable = function() {
             console.log("Filter function called");
-            var filter = document.getElementById("tagFilter").value.toLowerCase();
-            console.log("Selected filter:", filter);
+            var dropdownFilter = document.getElementById("tagFilter").value.toLowerCase();
+            var searchFilter = document.getElementById("tagSearch").value.toLowerCase();
+            console.log("Dropdown filter:", dropdownFilter);
+            console.log("Search query:", searchFilter);
             var rows = document.querySelectorAll(".dataview.table-view-table tbody tr");
             console.log("Number of rows:", rows.length);
 
@@ -15,9 +39,13 @@
                 var tagsCell = row.querySelector("td:last-child");
                 if (tagsCell) {
                     console.log("Tags cell found:", tagsCell);
-                    var tags = Array.from(tagsCell.querySelectorAll("a.tag")).map(tag => tag.textContent.replace("#", "").toLowerCase());
+                    var tags = tagsCell.textContent.trim().split(',').map(tag => tag.trim().toLowerCase());
                     console.log("Row tags:", tags);
-                    if (filter === "all" || tags.includes(filter)) {
+
+                    var matchesDropdown = (dropdownFilter === "all" || tags.includes(dropdownFilter));
+                    var matchesSearch = (searchFilter === "" || tags.some(tag => tag.includes(searchFilter)));
+
+                    if (matchesDropdown && matchesSearch) {
                         row.classList.remove("hidden");
                         console.log(`Row ${index + 1} shown`);
                     } else {
@@ -30,17 +58,28 @@
             });
         };
 
-        // Attach filter function to the dropdown
+        // Attach filter function to the dropdown and search bar
         var filterDropdown = document.getElementById("tagFilter");
+        var filterSearch = document.getElementById("tagSearch");
+
         if (filterDropdown) {
             console.log("Filter dropdown found:", filterDropdown);
             filterDropdown.addEventListener("change", filterTable);
         } else {
             console.log("Filter dropdown not found");
         }
+
+        if (filterSearch) {
+            console.log("Search bar found:", filterSearch);
+            filterSearch.addEventListener("input", filterTable);
+        } else {
+            console.log("Search bar not found");
+        }
+
+        // Populate dropdown with unique tags
+        populateDropdown();
     });
 </script>
-
 <style>
     .hidden { display: none !important; }
 </style>
