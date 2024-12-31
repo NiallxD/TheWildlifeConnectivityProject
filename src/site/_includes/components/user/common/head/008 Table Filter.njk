@@ -5,14 +5,14 @@
         // Filter function
         window.filterTable = function() {
             console.log("Filter function called");
-            var filter = document.getElementById("tag").value.toLowerCase();
+            var filter = document.getElementById("tagFilter").value.toLowerCase();
             console.log("Selected filter:", filter);
-            var rows = document.querySelectorAll("table-wrapper table tbody tr");
+            var rows = document.querySelectorAll(".table-wrapper table tbody tr");
             console.log("Number of rows:", rows.length);
 
             rows.forEach((row, index) => {
                 console.log(`Processing row ${index + 1}:`, row);
-                var tagsCell = row.querySelector("td:last-child");
+                var tagsCell = row.querySelector("td:nth-child(3)");
                 if (tagsCell) {
                     console.log("Tags cell found:", tagsCell);
                     var tags = Array.from(tagsCell.querySelectorAll("a.tag")).map(tag => tag.textContent.replace("#", "").toLowerCase());
@@ -31,7 +31,7 @@
         };
 
         // Attach filter function to the dropdown
-        var filterDropdown = document.getElementById("tag");
+        var filterDropdown = document.getElementById("tagFilter");
         if (filterDropdown) {
             console.log("Filter dropdown found:", filterDropdown);
             filterDropdown.addEventListener("change", filterTable);
