@@ -4,7 +4,7 @@
 
         // Function to extract unique tags from the table
         function populateDropdown() {
-            var rows = document.querySelectorAll(".table-wrapper table tbody tr");
+            var rows = document.querySelectorAll(".table-wrapper tbody tr");
             var tagsSet = new Set();
 
             rows.forEach((row) => {
@@ -31,7 +31,7 @@
             var searchFilter = document.getElementById("tagSearch").value.toLowerCase();
             console.log("Dropdown filter:", dropdownFilter);
             console.log("Search query:", searchFilter);
-            var rows = document.querySelectorAll(".table-wrapper table tbody tr");
+            var rows = document.querySelectorAll(".table-wrapper tbody tr");
             console.log("Number of rows:", rows.length);
 
             rows.forEach((row, index) => {
