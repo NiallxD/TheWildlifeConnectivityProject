@@ -5,8 +5,10 @@
         // Filter function
         window.filterTable = function() {
             console.log("Filter function called");
-            var filter = document.getElementById("tagFilter").value.toLowerCase();
-            console.log("Selected filter:", filter);
+            var dropdownFilter = document.getElementById("tagDropdown").value.toLowerCase();
+            var searchFilter = document.getElementById("tagSearch").value.toLowerCase();
+            console.log("Dropdown filter:", dropdownFilter);
+            console.log("Search query:", searchFilter);
             var rows = document.querySelectorAll(".table-wrapper table tbody tr");
             console.log("Number of rows:", rows.length);
 
@@ -17,7 +19,11 @@
                     console.log("Tags cell found:", tagsCell);
                     var tags = Array.from(tagsCell.querySelectorAll("a.tag")).map(tag => tag.textContent.replace("#", "").toLowerCase());
                     console.log("Row tags:", tags);
-                    if (filter === "all" || tags.includes(filter)) {
+
+                    var matchesDropdown = (dropdownFilter === "all" || tags.includes(dropdownFilter));
+                    var matchesSearch = (searchFilter === "" || tags.some(tag => tag.includes(searchFilter)));
+
+                    if (matchesDropdown && matchesSearch) {
                         row.classList.remove("hidden");
                         console.log(`Row ${index + 1} shown`);
                     } else {
@@ -30,13 +36,22 @@
             });
         };
 
-        // Attach filter function to the dropdown
-        var filterDropdown = document.getElementById("tagFilter");
+        // Attach filter function to the dropdown and search bar
+        var filterDropdown = document.getElementById("tagDropdown");
+        var filterSearch = document.getElementById("tagSearch");
+
         if (filterDropdown) {
             console.log("Filter dropdown found:", filterDropdown);
             filterDropdown.addEventListener("change", filterTable);
         } else {
             console.log("Filter dropdown not found");
+        }
+
+        if (filterSearch) {
+            console.log("Search bar found:", filterSearch);
+            filterSearch.addEventListener("input", filterTable);
+        } else {
+            console.log("Search bar not found");
         }
     });
 </script>
