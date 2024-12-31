@@ -8,9 +8,9 @@
             var tagsSet = new Set();
 
             rows.forEach((row) => {
-                var tagsCell = row.querySelector("td:nth-child(3)");
+                var tagsCell = row.querySelector("td:nth-child(6)"); // Adjusting to match the 'Tags' column position
                 if (tagsCell) {
-                    var tags = Array.from(tagsCell.querySelectorAll("a.tag")).map(tag => tag.textContent.replace("#", "").toLowerCase());
+                    var tags = tagsCell.textContent.toLowerCase().split(', ').map(tag => tag.trim());
                     tags.forEach(tag => tagsSet.add(tag));
                 }
             });
@@ -36,10 +36,10 @@
 
             rows.forEach((row, index) => {
                 console.log(`Processing row ${index + 1}:`, row);
-                var tagsCell = row.querySelector("td:nth-child(3)");
+                var tagsCell = row.querySelector("td:nth-child(6)"); // Adjusting to match the 'Tags' column position
                 if (tagsCell) {
                     console.log("Tags cell found:", tagsCell);
-                    var tags = Array.from(tagsCell.querySelectorAll("a.tag")).map(tag => tag.textContent.replace("#", "").toLowerCase());
+                    var tags = tagsCell.textContent.toLowerCase().split(', ').map(tag => tag.trim());
                     console.log("Row tags:", tags);
 
                     var matchesDropdown = (dropdownFilter === "all" || tags.includes(dropdownFilter));
@@ -80,8 +80,6 @@
         populateDropdown();
     });
 </script>
-
-
 <style>
     .hidden { display: none !important; }
 </style>
