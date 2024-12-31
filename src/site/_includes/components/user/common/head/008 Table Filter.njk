@@ -5,9 +5,9 @@
         // Filter function
         window.filterTable = function() {
             console.log("Filter function called");
-            var filter = document.getElementById("tagFilter").value.toLowerCase();
+            var filter = document.getElementById("tag").value.toLowerCase();
             console.log("Selected filter:", filter);
-            var rows = document.querySelectorAll(".dataview.table-view-table tbody tr");
+            var rows = document.querySelectorAll("table-wrapper table tbody tr");
             console.log("Number of rows:", rows.length);
 
             rows.forEach((row, index) => {
@@ -31,7 +31,7 @@
         };
 
         // Attach filter function to the dropdown
-        var filterDropdown = document.getElementById("tagFilter");
+        var filterDropdown = document.getElementById("tag");
         if (filterDropdown) {
             console.log("Filter dropdown found:", filterDropdown);
             filterDropdown.addEventListener("change", filterTable);
