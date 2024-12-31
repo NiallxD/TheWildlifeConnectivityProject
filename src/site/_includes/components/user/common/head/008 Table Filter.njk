@@ -10,7 +10,7 @@
             rows.forEach((row) => {
                 var tagsCell = row.querySelector("td:last-child");
                 if (tagsCell) {
-                    var tags = tagsCell.textContent.trim().split(',').map(tag => tag.trim().toLowerCase());
+                    var tags = tagsCell.textContent.trim().split(',').map(tag => tag.trim().replace(/^\S+\s/, "").toLowerCase());
                     tags.forEach(tag => tagsSet.add(tag));
                 }
             });
@@ -39,7 +39,7 @@
                 var tagsCell = row.querySelector("td:last-child");
                 if (tagsCell) {
                     console.log("Tags cell found:", tagsCell);
-                    var tags = tagsCell.textContent.trim().split(',').map(tag => tag.trim().toLowerCase());
+                    var tags = tagsCell.textContent.trim().split(',').map(tag => tag.trim().replace(/^\S+\s/, "").toLowerCase());
                     console.log("Row tags:", tags);
 
                     var matchesDropdown = (dropdownFilter === "all" || tags.includes(dropdownFilter));
