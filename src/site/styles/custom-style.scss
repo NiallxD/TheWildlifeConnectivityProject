@@ -1,25 +1,26 @@
 body.theme-dark {
-    --text-accent: #F2A748; /* The colour of the headings and linked text in DARK mode*/
-    --text-accent-hover: #F4B76A; /* The colour of the headings and linked text in DARK mode on hover*/
-    --interactive-accent: #F2A748; /* The colour of the main text in DARK mode*/
-    --h1-color: #F2A748;
-    --h2-color: #F2A748;
-    --h3-color: #F2A748;
-    --h4-color: #F2A748;
-    --h5-color: #F2A748;
-    --h6-color: #F2A748;
-    --text-normal: #F0F0F0; /* The colour of the main text in DARK mode*/
-    --text-muted: #F0F0F0;
-    --text-faint: #F0F0F0;
-    --interactive-normal: #ffaf57;
-    --interactive-hover: #ffbc71;
+    --text-accent: #FFFFFF; /* White colour for the headings and linked text */
+    --text-accent-hover: #E0E0E0; /* Slightly lighter white for hover */
+    --interactive-accent: #FFFFFF; /* White colour for the main text */
+    --h1-color: #FFFFFF;
+    --h2-color: #FFFFFF;
+    --h3-color: #FFFFFF;
+    --h4-color: #FFFFFF;
+    --h5-color: #FFFFFF;
+    --h6-color: #FFFFFF;
+    --text-normal: #FFFFFF; /* White colour for the main text */
+    --text-muted: #CCCCCC; /* Slightly muted white for less important text */
+    --text-faint: #999999; /* Even more muted white for faint text */
+    --interactive-normal: #00A36C; /* Eco green for buttons and interactive elements */
+    --interactive-hover: #008F59; /* Darker eco green for hover state */
     --background-primary: #1e1e1e;
     --background-secondary: #262626;
-    --waline-color: #F0F0F0;
-    --waline-info-color: #F0F0F0;
-    --waline-dark-grey: #F0F0F0;
-    --waline-theme-color: #F2A748;
-    --waline-active-color: #F4B76A;
+    --waline-color: #FFFFFF;
+    --waline-info-color: #FFFFFF;
+    --waline-dark-grey: #FFFFFF;
+    --waline-theme-color: #00A36C; /* Eco green for Waline theme elements */
+    --waline-active-color: #008F59; /* Darker eco green for active state */
+
 
     /*set comments border*/
     .wl-card {
@@ -118,27 +119,27 @@ body.theme-dark {
 }
 
 body.theme-light {
-    --text-accent: #F2A748;
-    --text-accent-hover: #F4B76A;
-    --interactive-accent: #F2A748;
-    --h1-color: #F2A748;
-    --h2-color: #F2A748;
-    --h3-color: #F2A748;
-    --h4-color: #F2A748;
-    --h5-color: #F2A748;
-    --h6-color: #F2A748;
-    --text-normal: #2F2F2F; /* The colour of the main text in LIGHT mode*/
+    --text-accent: #00A36C; /* Eco green for headings and linked text */
+    --text-accent-hover: #008F59; /* Darker eco green for hover */
+    --interactive-accent: #00A36C; /* Eco green for the main text */
+    --h1-color: #00A36C;
+    --h2-color: #00A36C;
+    --h3-color: #00A36C;
+    --h4-color: #00A36C;
+    --h5-color: #00A36C;
+    --h6-color: #00A36C;
+    --text-normal: #2F2F2F; /* The color of the main text in light mode */
     --text-muted: #2F2F2F;
     --text-faint: #2F2F2F;
-     --interactive-normal: #ffaf57;
-    --interactive-hover: #ffbc71;
+    --interactive-normal: #00A36C; /* Eco green for buttons and interactive elements */
+    --interactive-hover: #008F59; /* Darker eco green for hover state */
     --background-primary: #ffffff;
     --background-secondary: #fafafa;
     --waline-color: #2F2F2F;
     --waline-info-color: #2F2F2F;
     --waline-dark-grey: #2F2F2F;
-    --waline-theme-color: #F2A748;
-    --waline-active-color: #F4B76A;
+    --waline-theme-color: #00A36C; /* Eco green for Waline theme elements */
+    --waline-active-color: #008F59; /* Darker eco green for active state */
 
     /*set comments border*/
     .wl-card {
