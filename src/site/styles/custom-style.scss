@@ -291,14 +291,14 @@ body {
     }
     
     .content {
-        max-width: 800px;
+        max-width: 1200px;
         margin: auto;
         font-size: 18px;
         line-height: 1.5;
         margin-top: 90px;
         position: relative;
     
-        @media (max-width: 800px) {
+        @media (max-width: 1200px) {
             margin-top: 75px;
         }
         
@@ -571,7 +571,7 @@ body {
         .search-button {
             border-radius: 10px;
 
-            @media (max-width: 800px) {
+            @media (max-width: 1200px) {
                 margin-right: 10px;
             }
         }
