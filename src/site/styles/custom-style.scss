@@ -65,14 +65,6 @@ body.theme-dark {
         background-position: center; /* Adjust the background-position to center */
     }
 
-    nav.filetree-sidebar h1::after {
-        content: '';
-        visibility: hidden; /* Hide the text */
-    }
-
-    nav.filetree-sidebar h1 {
-        font-size: 0; /* Effectively hides the text */
-    }
     
     #floating-control {
         position: fixed;
@@ -191,14 +183,6 @@ body.theme-light {
         background-position: center; /* Adjust the background-position to center */
     } 
 
-   nav.filetree-sidebar h1::after {
-        content: '';
-        visibility: hidden; /* Hide the text */
-    }
-
-    nav.filetree-sidebar h1 {
-        font-size: 0; /* Effectively hides the text */
-    }
     
     #floating-control {
         position: fixed;
