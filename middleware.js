@@ -5,7 +5,7 @@ export function middleware(req) {
     const authorization = req.headers.get('authorization');
 
     if (!authorization || authorization !== `Basic ${Buffer.from(`admin:${password}`).toString('base64')}`) {
-        return new NextResponse('Unauthorized', { status: 401 });
+        return NextResponse('Unauthorized', { status: 401 });
     }
 
     return NextResponse.next();
