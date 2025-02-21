@@ -1,5 +1,5 @@
 export default function middleware(req, res, next) {
-    const password = 'yourPassword'; // Replace with your actual password
+    const password = 'findingrefuge'; // Replace with your actual password
     const authHeader = req.headers['authorization'];
     
     if (!authHeader || !authHeader.startsWith('Basic ')) {
