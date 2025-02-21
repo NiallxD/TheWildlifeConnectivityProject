@@ -53,7 +53,7 @@ body.theme-dark {
         background-color: #1E1E1E;
     }
     
-   nav.filetree-sidebar h1::before {
+    nav.filetree-sidebar h1::before {
         content: " ";
         display: block; /* Change this to block */
         width: 100%; /* Adjust the width to 100% */
@@ -64,7 +64,6 @@ body.theme-dark {
         margin-bottom: 5px; /* Change margin-right to margin-bottom */
         background-position: center; /* Adjust the background-position to center */
     }
-
     
     #floating-control {
         position: fixed;
@@ -181,8 +180,7 @@ body.theme-light {
         background-image: url(/img/fr-dark.png);
         margin-bottom: 5px; /* Change margin-right to margin-bottom */
         background-position: center; /* Adjust the background-position to center */
-    }
-
+    } 
     
     #floating-control {
         position: fixed;
@@ -778,4 +776,3 @@ body.backlinks-note-icon .backlink[data-note-icon="withered"]::before {
 .header-meta {
     display: none;
 }
-
