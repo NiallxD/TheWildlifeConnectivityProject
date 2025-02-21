@@ -1,5 +1,5 @@
 export default function middleware(req, res, next) {
-    const password = 'findingrefuge'; // Replace with your actual password
+    const password = process.env.PASSWORD; // Use the environment variable for the password
     const authHeader = req.headers['authorization'];
     
     if (!authHeader || !authHeader.startsWith('Basic ')) {
