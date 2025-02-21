@@ -13,5 +13,12 @@
       "source": "/partners-area",
       "destination": "/middleware"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "/404",
+      "statusCode": 404
+    }
   ]
 }
