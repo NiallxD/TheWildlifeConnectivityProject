@@ -66,8 +66,10 @@ body.theme-dark {
     }
 
     nav.filetree-sidebar h1 {
-        visibility: hidden; /* Hides the text but keeps the space */
-        position: relative; /* Ensures proper positioning */
+        height: 0; /* Hide the text by setting height to 0 */
+        overflow: hidden; /* Prevent any overflow */
+        position: relative; /* Ensure proper positioning without affecting the icon */
+        visibility: hidden; /* Hides the text */
     }
     
     #floating-control {
@@ -187,9 +189,11 @@ body.theme-light {
         background-position: center; /* Adjust the background-position to center */
     } 
 
-    nav.filetree-sidebar h1 {
-        visibility: hidden; /* Hides the text but keeps the space */
-        position: relative; /* Ensures proper positioning */
+   nav.filetree-sidebar h1 {
+        height: 0; /* Hide the text by setting height to 0 */
+        overflow: hidden; /* Prevent any overflow */
+        position: relative; /* Ensure proper positioning without affecting the icon */
+        visibility: hidden; /* Hides the text */
     }
     
     #floating-control {
