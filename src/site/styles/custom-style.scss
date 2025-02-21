@@ -65,12 +65,6 @@ body.theme-dark {
         background-position: center;
     }
     
-    nav.filetree-sidebar h1 {
-        visibility: hidden; /* Hide the text but keep its space */
-        display: inline-block; /* Ensure it still takes up space */
-    }
-
-    
     #floating-control {
         position: fixed;
         color: #F0F0F0;
@@ -187,11 +181,6 @@ body.theme-light {
         margin-bottom: 5px; /* Change margin-right to margin-bottom */
         background-position: center; /* Adjust the background-position to center */
     } 
-
-    nav.filetree-sidebar h1 {
-        visibility: hidden; /* Hide the text but keep its space */
-        display: inline-block; /* Ensure it still takes up space */
-    }
     
     #floating-control {
         position: fixed;
