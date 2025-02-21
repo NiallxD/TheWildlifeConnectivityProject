@@ -65,11 +65,13 @@ body.theme-dark {
         background-position: center; /* Adjust the background-position to center */
     }
 
+    nav.filetree-sidebar h1::after {
+        content: '';
+        visibility: hidden; /* Hide the text */
+    }
+
     nav.filetree-sidebar h1 {
-        height: 0; /* Hide the text by setting height to 0 */
-        overflow: hidden; /* Prevent any overflow */
-        position: relative; /* Ensure proper positioning without affecting the icon */
-        visibility: hidden; /* Hides the text */
+        font-size: 0; /* Effectively hides the text */
     }
     
     #floating-control {
@@ -189,11 +191,13 @@ body.theme-light {
         background-position: center; /* Adjust the background-position to center */
     } 
 
-   nav.filetree-sidebar h1 {
-        height: 0; /* Hide the text by setting height to 0 */
-        overflow: hidden; /* Prevent any overflow */
-        position: relative; /* Ensure proper positioning without affecting the icon */
-        visibility: hidden; /* Hides the text */
+   nav.filetree-sidebar h1::after {
+        content: '';
+        visibility: hidden; /* Hide the text */
+    }
+
+    nav.filetree-sidebar h1 {
+        font-size: 0; /* Effectively hides the text */
     }
     
     #floating-control {
