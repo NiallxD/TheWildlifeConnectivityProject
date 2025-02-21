@@ -58,7 +58,7 @@ body.theme-dark {
         display: none;
     }
     
-    /* Add the icon using a new container */
+    /* Add the icon using a new container with proper positioning */
     nav.filetree-sidebar::after {
         content: " ";
         display: block;
@@ -66,10 +66,13 @@ body.theme-dark {
         height: 200px;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(/img/fr-dark.png);
+        background-image: url(/img/fr-light.png);
         margin-bottom: 5px;
         background-position: center;
+        position: absolute;
+        top: 0; /* Adjust this value as needed to position the icon at the top */
     }
+
 
     
     #floating-control {
@@ -182,7 +185,7 @@ body.theme-light {
         display: none;
     }
     
-    /* Add the icon using a new container */
+    /* Add the icon using a new container with proper positioning */
     nav.filetree-sidebar::after {
         content: " ";
         display: block;
@@ -190,10 +193,13 @@ body.theme-light {
         height: 200px;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(/img/fr-light.png);
+        background-image: url(/img/fr-dark.png);
         margin-bottom: 5px;
         background-position: center;
+        position: absolute;
+        top: 0; /* Adjust this value as needed to position the icon at the top */
     }
+
     
     #floating-control {
         position: fixed;
