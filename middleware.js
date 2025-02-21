@@ -1,8 +1,16 @@
-export default function middleware(req, res, next) {
-    const password = process.env.PASSWORD; // Use the environment variable for the password
-    if (req.headers['authorization'] !== `Basic ${Buffer.from(`admin:${password}`).toString('base64')}`) {
-        res.status(401).send('Unauthorized');
-        return;
+import { NextResponse } from 'next/server';
+
+export function middleware(req) {
+    const password = process.env.PASSWORD;
+    const authorization = req.headers.get('authorization');
+
+    if (!authorization || authorization !== `Basic ${Buffer.from(`admin:${password}`).toString('base64')}`) {
+        return new NextResponse('Unauthorized', { status: 401 });
     }
-    next();
+
+    return NextResponse.next();
 }
+
+export const config = {
+    matcher: '/partners-area',
+};
