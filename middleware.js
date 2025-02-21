@@ -1,25 +1,33 @@
-export default function middleware(req, res) {
-    const password = process.env.PASSWORD; // Use the environment variable for the password
-    const authorization = req.headers['authorization'];
+export default function middleware(req) {
+    const password = process.env.PASSWORD;
+    const authHeader = req.headers.get('authorization');
 
-    if (!authorization) {
-        res.status(401).json({ message: 'Unauthorized' });
-        return;
+    if (!authHeader || !authHeader.startsWith('Basic ')) {
+        return new Response('Unauthorized', {
+            status: 401,
+            headers: {
+                'WWW-Authenticate': 'Basic realm="Protected"',
+            },
+        });
     }
 
-    const [scheme, credentials] = authorization.split(' ');
+    const base64Credentials = authHeader.split(' ')[1];
+    const credentials = atob(base64Credentials).split(':');
 
-    if (scheme !== 'Basic') {
-        res.status(401).json({ message: 'Unauthorized' });
-        return;
+    if (credentials[0] !== 'admin' || credentials[1] !== password) {
+        return new Response('Unauthorized', {
+            status: 401,
+            headers: {
+                'WWW-Authenticate': 'Basic realm="Protected"',
+            },
+        });
     }
 
-    const [username, pass] = Buffer.from(credentials, 'base64').toString().split(':');
-
-    if (username !== 'admin' || pass !== password) {
-        res.status(401).json({ message: 'Unauthorized' });
-        return;
-    }
-
-    res.next();
+    return new Response('OK', {
+        status: 200,
+    });
 }
+
+export const config = {
+    matcher: '/partners-area',
+};
