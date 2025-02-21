@@ -17,7 +17,7 @@
 {
   "rewrites": [
     {
-      "source": "/protected-page",
+      "source": "/partners-area",
       "destination": "/middleware"
     }
   ]
