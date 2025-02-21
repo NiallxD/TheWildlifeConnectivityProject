@@ -1,24 +1,15 @@
 {
-  "git": {
-    "deploymentEnabled": {
-      "main": false
-    }
-  },
-  "outputDirectory": "dist",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run start",
-  "rewrites": [
-    {
-      "source": "/partners-area",
-      "destination": "/middleware"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "/404",
-      "statusCode": 404
-    }
-  ]
+    "git": {
+      "deploymentEnabled": {
+        "main": false
+      }
+    },
+    "outputDirectory": "dist",
+    "installCommand": "npm install",
+    "buildCommand": "npm run build",
+    "devCommand": "npm run start",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/(.*)", "status": 404, "dest": "/404" }
+      ]
 }
